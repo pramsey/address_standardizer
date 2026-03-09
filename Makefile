@@ -38,6 +38,8 @@ PG_CFLAGS += -DPCRE_VERSION=2
 
 PG_LDFLAGS += -lpcre2-8
 
+with_llvm = no
+
 #PG_LIBS
 #LIBS += 
 #SHLIB_LINK := $(LIBS)
