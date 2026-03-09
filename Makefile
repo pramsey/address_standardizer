@@ -33,9 +33,8 @@ REGRESS = \
 	standardize_address_1 \
 	standardize_address_2
 
-CFLAGS += -DAS_VERSION=\"$(AS_VERSION)\"
-CFLAGS += -DPCRE_VERSION=2
-PG_CFLAGS += $(CFLAGS)
+PG_CFLAGS += -DAS_VERSION=\"$(AS_VERSION)\"
+PG_CFLAGS += -DPCRE_VERSION=2
 
 PG_LDFLAGS += -lpcre2-8
 
