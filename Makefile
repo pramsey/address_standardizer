@@ -37,8 +37,6 @@ PG_CFLAGS := -DAS_VERSION=\"$(AS_VERSION)\" -DPCRE_VERSION=2
 
 PG_LDFLAGS := -lpcre2-8
 
-with_llvm := no
-
 #PG_LIBS
 #LIBS += 
 #SHLIB_LINK := $(LIBS)
@@ -66,5 +64,7 @@ data/$(EXTENSION)--ANY--$(AS_VERSION).sql: data/$(EXTENSION)_upgrade.sql
 
 PGXS := $(shell $(PG_CONFIG) --pgxs)
 include $(PGXS)
+
+with_llvm := no
 
 
