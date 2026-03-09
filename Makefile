@@ -14,7 +14,6 @@ AS_VERSION = $(shell grep default $(EXTENSION).control | cut -f2 -d'=' | tr -d "
 #
 PG_CONFIG = pg_config
 
-
 MODULE_big = $(EXTENSION)
 
 SRCS = $(wildcard src/*.c)
