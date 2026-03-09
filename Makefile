@@ -34,7 +34,7 @@ REGRESS = \
 	standardize_address_2
 
 PG_CPPFLAGS := -DAS_VERSION=\"$(AS_VERSION)\" -DPCRE_VERSION=2
-
+PG_CFLAGS := "-Werror"
 PG_LDFLAGS := -lpcre2-8
 
 #PG_LIBS
