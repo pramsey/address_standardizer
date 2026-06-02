@@ -30,7 +30,7 @@ jobs:
       id: version
       run: |
         pwd
-        AS_VERSION=`grep default $(EXTENSION).control | cut -f2 -d'=' | tr -d "' "`
+        AS_VERSION=$(grep default address_standardizer.control | cut -f2 -d'=' | tr -d "' ")
         echo AS_VERSION $AS_VERSION
         echo "::set-output name=asversion::${AS_VERSION}"
 
