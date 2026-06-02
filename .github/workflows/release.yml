@@ -16,7 +16,8 @@ jobs:
     runs-on: ubuntu-latest
 
     # Only run release on central repo
-    if: github.repository == 'postgis/address_standardizer'
+    # if: github.repository == 'postgis/address_standardizer'
+    if: github.repository == 'pramsey/address_standardizer'
     steps:
 
     - uses: actions/checkout@v6
