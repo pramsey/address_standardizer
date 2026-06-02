@@ -41,6 +41,14 @@ jobs:
         perl tools/releasenotes.pl NEWS.md > release.md
         echo "::set-output name=asnotes::./release.md"
 
+    - name: Install postgresql-server-dev
+      id: installpg
+      run: |
+        PG_VERSION=$(pg_config --version | awk '{print $2}' | cut -d. -f1)
+        echo "Detected PostgreSQL major version: $PG_VERSION"
+        sudo apt-get update
+        sudo apt-get install -y postgresql-server-dev-$PG_VERSION
+
     - name: 'Bundle & Check Package'
       id: bundle
       run: |
