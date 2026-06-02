@@ -54,7 +54,7 @@ jobs:
       run: |
         pwd
         set -e
-        make && make dist
+        make with_llvm=no && make dist
 
     - name: Create Release
       if: ${{ steps.tag.outputs.tag == steps.version.outputs.asversion }}
